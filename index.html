@@ -225,6 +225,16 @@ footer .addr{font-weight:700;color:var(--ink)}
 .lb-scroll img{margin:0 auto;width:100%;max-width:1000px;height:auto}
 .lb.zoom .lb-scroll img{width:auto;max-width:none}
 html[data-lang="ko"] body{word-break:keep-all}
+/* contact buttons in free section */
+.askrow{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.askrow .btn{width:100%;padding:12px 8px;font-size:14px;flex-direction:column;gap:1px}
+.askrow .btn small{font-size:11.5px;font-weight:700;opacity:.8}
+.b-wa{background:#1FA855;color:#fff}
+.b-line{background:#06C755;color:#fff}
+.b-wc{background:#07C160;color:#fff}
+.b-ig{background:#C13584;color:#fff}
+.ask-h{font-size:13px;font-weight:800;color:var(--ink);margin:16px 0 0}
+.ch button{appearance:none;font-family:inherit;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:2px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:11px;padding:11px 13px;color:#fff}
 /* free-rides banner + section */
 .freebar{display:flex;justify-content:space-between;align-items:center;gap:10px;text-decoration:none;background:var(--lime);color:var(--ink);border-radius:12px;padding:13px 15px;margin:0 0 22px}
 .freebar b{font-size:15.5px;font-weight:900;line-height:1.3}
@@ -338,7 +348,14 @@ html[data-lang="ko"] body{word-break:keep-all}
       </div>
       <div class="good"><span class="lbl" data-i18n="lbl_free"></span><span data-i18n="free_cond"></span></div>
       <p class="free-under" data-i18n="free_under"></p>
-      <a class="btn btn-blue btn-full btn-cta" href="#contact" data-i18n="free_cta"></a>
+      <a class="btn btn-blue btn-full btn-cta" href="https://crashin-yongsan.com/lounge" target="_blank" rel="noopener" data-i18n="free_cta"></a>
+      <p class="ask-h" data-i18n="ask_h"></p>
+      <div class="askrow">
+        <a class="btn b-wa" href="https://wa.me/821026025597" target="_blank" rel="noopener">WhatsApp<small>+82 10 2602 5597</small></a>
+        <a class="btn b-line" href="https://line.me/R/ti/p/@391fgmwc" target="_blank" rel="noopener">LINE<small>@391fgmwc</small></a>
+        <button type="button" class="btn b-wc" data-copy="crashinyongsan">WeChat<small data-i18n="wc_copy"></small></button>
+        <a class="btn b-ig" href="https://ig.me/m/yongsanlounge" target="_blank" rel="noopener">Instagram<small>@yongsanlounge</small></a>
+      </div>
     </div>
   </section>
 
@@ -467,8 +484,9 @@ html[data-lang="ko"] body{word-break:keep-all}
     <h2 data-i18n="c_t"></h2>
     <p class="sub" data-i18n="c_s"></p>
     <div class="ch">
-      <div><span class="n">WeChat <em data-i18n="c_official"></em></span><span class="v">@transitlounge</span></div>
-      <div><span class="n">LINE</span><span class="v">@391fgmwc</span></div>
+      <button type="button" data-copy="crashinyongsan"><span class="n">WeChat <em data-i18n="c_tapcopy"></em></span><span class="v">crashinyongsan</span></button>
+      <button type="button" data-copy="transitlounge"><span class="n">WeChat <em data-i18n="c_official"></em></span><span class="v">@transitlounge</span></button>
+      <a href="https://line.me/R/ti/p/@391fgmwc" target="_blank" rel="noopener"><span class="n">LINE</span><span class="v">@391fgmwc</span></a>
       <a href="https://wa.me/821026025597" target="_blank" rel="noopener"><span class="n">WhatsApp</span><span class="v">+82 10 2602 5597</span></a>
       <a href="https://instagram.com/yongsanlounge" target="_blank" rel="noopener"><span class="n">Instagram</span><span class="v">@yongsanlounge</span></a>
       <a href="tel:+821023561851"><span class="n">Phone</span><span class="v">+82 10 2356 1851</span></a>
@@ -587,7 +605,7 @@ lg_arex:'AREX',
 lbl_free:'무료 조건',
 free_cond:'4시간 이상 이용 · 사전 예약 및 선결제 · 1회 최대 4명<br><strong>호텔 지역</strong>: 홍대 · 마포 · 이태원 · 명동 · 서울역<br><strong>출발 시간</strong>: 11:00 / 12:00 (13:00 · 14:00 요청 가능) · 호텔 픽업은 전날까지 예약',
 free_under:'4시간 미만: 서울역 픽업 6,000원 · 호텔 픽업/샌딩 10,000원 · 짐 픽업/배송 20,000원(보관 포함) — 모두 1회 기준',
-free_cta:'메시지로 무료 픽업·샌딩 예약하기',
+free_cta:'홈페이지에서 바로 예약하기',
 p_1h_n:'시간당',
 p_best:'추천 · 서울역 픽업 · 호텔 샌딩 · 짐 서비스 모두 무료 (최대 6시간)',
 r_t:'픽업 · 샌딩 · 짐 서비스 (06:00–21:00)',
@@ -600,7 +618,10 @@ r_bag:'짐 픽업 · 배송 (보관 포함)',
 r_sto:'짐 보관만 (2개까지)',
 r_free:'무료',
 r_pre:'선결제',
-r_note:'픽업·샌딩 요금은 1회 기준이며, 1회 최대 4명까지 탑승합니다.'
+r_note:'픽업·샌딩 요금은 1회 기준이며, 1회 최대 4명까지 탑승합니다.',
+ask_h:'메시지로 문의 · 예약 (눌러서 바로 연결)',
+wc_copy:'ID 복사하기',
+c_tapcopy:'눌러서 ID 복사'
 };
 
 T.en={
@@ -682,7 +703,7 @@ lg_arex:'AREX',
 lbl_free:'Free when',
 free_cond:'You stay 4+ hours · booked and prepaid in advance · up to 4 people per trip<br><strong>Hotel areas</strong>: Hongdae · Mapo · Itaewon · Myeongdong · Seoul Station<br><strong>Departures</strong>: 11:00 / 12:00 (13:00 · 14:00 on request) · hotel pick-up: book 1 day ahead',
 free_under:'Under 4 hours: Seoul Stn pickup 6,000 · hotel pick-up/drop-off 10,000 · luggage pick-up/delivery 20,000 KRW (storage incl.) — per trip',
-free_cta:'Message us to book free rides',
+free_cta:'Book on our website',
 p_1h_n:'per hour',
 p_best:'Best value · Seoul Stn pickup, hotel drop-off &amp; luggage service FREE (up to 6 hrs)',
 r_t:'Rides &amp; luggage (06:00–21:00)',
@@ -695,7 +716,10 @@ r_bag:'Luggage pick-up / delivery (storage incl.)',
 r_sto:'Luggage storage only (up to 2 bags)',
 r_free:'FREE',
 r_pre:'prepaid',
-r_note:'Ride fares are per trip, up to 4 people per trip.'
+r_note:'Ride fares are per trip, up to 4 people per trip.',
+ask_h:'Or message us — tap to open the app',
+wc_copy:'Tap to copy ID',
+c_tapcopy:'tap to copy ID'
 };
 
 T.zh={
@@ -777,7 +801,7 @@ lg_arex:'AREX',
 lbl_free:'免费条件',
 free_cond:'使用4小时以上 · 需提前预约并预付 · 每趟最多4人<br><strong>酒店区域</strong>：弘大 · 麻浦 · 梨泰院 · 明洞 · 首尔站<br><strong>出发时间</strong>：11:00 / 12:00（13:00、14:00 可预约）· 酒店接人请提前一天预约',
 free_under:'不足4小时：首尔站接人 6,000 · 酒店接送 10,000 · 行李取送 20,000韩元（含寄存）— 每趟',
-free_cta:'发消息预约免费接送',
+free_cta:'在官网直接预约',
 p_1h_n:'每小时',
 p_best:'最划算 · 首尔站接人、酒店接送、行李服务全免费（最长6小时）',
 r_t:'接送与行李 (06:00–21:00)',
@@ -790,7 +814,10 @@ r_bag:'行李取送（含寄存）',
 r_sto:'仅寄存行李（最多2件）',
 r_free:'免费',
 r_pre:'需预付',
-r_note:'接送费用按趟计算，每趟最多4人。'
+r_note:'接送费用按趟计算，每趟最多4人。',
+ask_h:'或发消息咨询 · 预约（点击直接打开）',
+wc_copy:'点击复制微信号',
+c_tapcopy:'点击复制微信号'
 };
 
 T.ja={
@@ -872,7 +899,7 @@ lg_arex:'AREX',
 lbl_free:'無料の条件',
 free_cond:'4時間以上のご利用 · 事前予約・事前払い · 1回4名まで<br><strong>ホテルエリア</strong>：弘大・麻浦・梨泰院・明洞・ソウル駅<br><strong>出発時間</strong>：11:00 / 12:00（13:00・14:00は要予約）· ホテルお迎えは前日までに予約',
 free_under:'4時間未満：ソウル駅お迎え 6,000 · ホテル送迎 10,000 · 荷物集荷 20,000ウォン（預かり込み）— 1回あたり',
-free_cta:'メッセージで無料送迎を予約',
+free_cta:'ウェブサイトで予約する',
 p_1h_n:'1時間あたり',
 p_best:'おすすめ · ソウル駅お迎え・ホテル送迎・荷物サービスすべて無料（最長6時間）',
 r_t:'送迎と荷物 (06:00–21:00)',
@@ -885,7 +912,10 @@ r_bag:'荷物の集荷・お届け（預かり込み）',
 r_sto:'荷物預かりのみ（2個まで）',
 r_free:'無料',
 r_pre:'事前払い',
-r_note:'送迎料金は1回あたり、1回4名までです。'
+r_note:'送迎料金は1回あたり、1回4名までです。',
+ask_h:'メッセージでのお問い合わせ・予約（タップで開きます）',
+wc_copy:'IDをコピー',
+c_tapcopy:'タップでIDをコピー'
 };
 
 (function(){
@@ -948,6 +978,10 @@ r_note:'送迎料金は1回あたり、1回4名までです。'
   });
   document.getElementById('copyAddr').addEventListener('click',function(){
     copy(document.getElementById('addrText').textContent,this);
+  });
+
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){ copy(b.getAttribute('data-copy'),b); });
   });
 
   /* lightbox */
